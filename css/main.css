@@ -11,7 +11,7 @@
    ========================================================================== */
 
 html {
-    color: #222;
+    /*color: #222;*/
     font-size: 1em;
     line-height: 1.4;
 }
@@ -96,19 +96,60 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+html{
+    background: linear-gradient(270deg, #ff0085, #f7865b);
+    background-size: 400% 400%;
 
-
-body {
-    background-color: white;
+    -webkit-animation: gradient 10s ease infinite;
+    -moz-animation: gradient 10s ease infinite;
+    animation: gradient 10s ease infinite;
 }
 
-h1, p {
-    font-family: 'Roboto Mono', monospace;
+@-webkit-keyframes gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes gradient { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+h1 {
+    font-family: lust, serif;
+    color: white;
+    font-size: 4em;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+p {
+    font-family: questa-sans, sans-serif;
     color: white;
 }
 
+.content-title{
+    float: left;
+    margin-left: 60px;
+}
 
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
 
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
 
 
 
